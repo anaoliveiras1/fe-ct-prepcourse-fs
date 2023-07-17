@@ -221,7 +221,7 @@ function doWhile(num) {
    // Utilizar el bucle Do-While.
    // Tu código:
    var limite = 8;
-   {
+   do {
       num = num + 5;
       limite = limite -1
 
