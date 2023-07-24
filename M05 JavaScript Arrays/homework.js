@@ -205,7 +205,7 @@ function mesesDelAño(array) {
    if (mesesencontrados.length === mesespedido.length){
       return mesesencontrados;
    } else {
-      return "No se encontraron los meses pedidos"
+      return "No se encontraron los meses pedidos";
    }
 
 }
@@ -214,14 +214,31 @@ function tablaDelSeis() {
    // Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
    // La función devuelve un arreglo con los resultados de la tabla de multiplicar del 6 en orden creciente.
    // Tu código:
-
+   let porSeis = [];
+   for (let i = 0; i <= 60; i++) {
+     if (i % 6 === 0) {
+       porSeis.push(i);
+     }
+   }
+   return porSeis;
    
+  
 }
 
 function mayorACien(array) {
    // La función recibe un arreglo con enteros entre 0 y 200.
    // Recorrerlo y retornar un arreglo con todos los valores mayores a 100 (no incluye el 100).
    // Tu código:
+  
+   var mayorACien = [];
+
+   for (var i = 0; i < array.length; i++) {
+     if (array[i] > 100) {
+       mayorACien.push(array[i]);
+     }
+   }
+ 
+   return mayorACien;
 }
 
 /* ----------------------------------------------------------------------------------
@@ -235,7 +252,10 @@ function breakStatement(num) {
    // la ejecución y retornar el string: "Se interrumpió la ejecución".
    // [PISTA]: utiliza el statement 'break'.
    // Tu código:
-}
+
+    }
+    
+
 
 function continueStatement(num) {
    // Iterar en un bucle aumentando en 2 el número recibido hasta un límite de 10 veces.
