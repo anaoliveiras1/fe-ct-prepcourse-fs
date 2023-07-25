@@ -253,7 +253,19 @@ function breakStatement(num) {
    // [PISTA]: utiliza el statement 'break'.
    // Tu código:
 
+   const newarray = [];
+
+    for( let i = 0; i < 10 ; i ++){
+      num += 2;
+
+      newarray.push(num);
+
+      if (num === i){
+         return "Se interrumpió la ejecución";
+      }
     }
+  return newarray;
+}
     
 
 
@@ -264,7 +276,17 @@ function continueStatement(num) {
    // se continua con la siguiente iteración.
    // [PISTA]: utiliza el statement 'continue'.
    // Tu código:
-}
+
+      const newArray = [];
+      for (let i = 0; i < 10; i++) {
+        if (i === 5) {
+          continue;
+        }
+        num += 2;
+        newArray.push(num);
+      }
+      return newArray;
+    }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
 module.exports = {
