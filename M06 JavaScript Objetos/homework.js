@@ -92,28 +92,16 @@ function tienePropiedad(objeto, propiedad) {
    // Verifica si el objeto recibido posee una propiedad con el mismo nombre que el parámetro "propiedad".
    // En ese caso retornar true. Caso contrario, false.
    // Tu código:
-  
-   if (objeto[propiedad] !== propiedad){
-      return true;
-   } else {
-      return false;
-   }
-
+  return objeto.hasOwnProperty(propiedad);
 }
 
 function verificarPassword(objetoUsuario, password) {
    // Verifica si la propiedad "password" del "objetoUsuario" coincide con el parámetro "password".
    // En ese caso retornar true. Caso contrario, false.
    // Tu código:
-
-   if (objetoUsuario.password === password){
-      return true;
-   } else {
-      return false;
-   }
-  
-
+   return objetoUsuario.hasOwnProperty(password);
 }
+
 
 function actualizarPassword(objetoUsuario, nuevaPassword) {
    // Reemplaza la contrseña guardada en la propiedad "password" del "objetoUsuario".
