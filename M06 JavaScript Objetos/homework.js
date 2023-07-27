@@ -99,7 +99,13 @@ function verificarPassword(objetoUsuario, password) {
    // Verifica si la propiedad "password" del "objetoUsuario" coincide con el parámetro "password".
    // En ese caso retornar true. Caso contrario, false.
    // Tu código:
-   return objetoUsuario.hasOwnProperty(password);
+   
+  if (objetoUsuario.password === password){
+   return true;
+}else {
+   return false;
+}
+   
 }
 
 
@@ -109,12 +115,8 @@ function actualizarPassword(objetoUsuario, nuevaPassword) {
    // Retornar el objeto.
    // Tu código:
 
-   const actualizarPassword = {
-      objetoUsuario: password
-   }; 
-
-   actualizarPassword.objetoUsuario = nuevaPassword;
-   return actualizarPassword;
+   objetoUsuario.password = nuevaPassword;
+return objetoUsuario;
 }
 
 function agregarAmigo(objetoUsuario, nuevoAmigo) {
@@ -122,6 +124,10 @@ function agregarAmigo(objetoUsuario, nuevoAmigo) {
    // Debes agregar el "nuevoAmigo" al final de este arreglo.
    // Retornar el objeto.
    // Tu código:
+
+ 
+    objetoUsuario.amigos.push(nuevoAmigo);
+    return objetoUsuario;
 }
 
 function pasarUsuarioAPremium(objetoMuchosUsuarios) {
@@ -130,6 +136,12 @@ function pasarUsuarioAPremium(objetoMuchosUsuarios) {
    // Define esta propiedad de todos los usuarios como true.
    // Retornar el arreglo.
    // Tu código:
+   objetoMuchosUsuarios.forEach((usuario) => {
+      usuario.esPremium = true;
+    });
+
+    return objetoMuchosUsuarios;
+   
 }
 
 function sumarLikesDeUsuario(objetoUsuario) {
